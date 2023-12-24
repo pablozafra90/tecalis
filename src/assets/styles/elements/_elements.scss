@@ -8,10 +8,15 @@
     padding: 16px 32px 16px 32px ;
     border-radius: 16px;
     box-sizing: content-box;
+    cursor: pointer;
 
     &--01 {
         background-color: map-get($colors, "main-blue" );
         color: map-get($colors, "white" );
+
+        &:hover {
+            background-color: map-get($colors, "dark-blue" );
+        }
     }
 }
 

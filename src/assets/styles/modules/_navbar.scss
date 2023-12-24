@@ -1,4 +1,4 @@
-
+@import '../base/_variables.scss';
 
 .nav-bar {
     position: fixed;
@@ -6,16 +6,21 @@
     box-sizing: border-box;
     margin: 0;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
     width: 100%;
     align-items: center;
-    max-width: 1502px;
+    background-color: map-get($colors, "white" );
+
+    &--on-top {
+        background-color: transparent;
+    }
 
     &__container {
-        margin: 0 auto;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
         height: 48px;
         width: 100%;
+        max-width: 1440px;
     }
 
     * {
