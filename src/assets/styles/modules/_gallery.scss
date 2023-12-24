@@ -1,0 +1,154 @@
+@import '../base/variables.scss';
+
+
+.gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    box-sizing: border-box;
+
+    &__only-desktop-column {
+        max-width: 790px;
+
+        &__item {
+    
+            &--active {
+                display: block;
+            }
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 5px;
+    }
+
+    button {
+        width: 100%;
+        border: none;
+        padding: 16px;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 8px;
+        text-align: left;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 36px;
+    }
+
+    &__item-container {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    &__main-column {
+        max-width: 400px;
+
+        .item-container {
+
+            .item-content {
+                display: none;
+            }
+        }
+
+        .item-container--active {
+
+            button {
+                background-color: map-get($colors, "light-blue" );
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__photo {
+        border-radius: 10px;
+    }
+
+    &__text {
+        text-align: center;
+    }
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+    /* Estilos para dispositivos móviles pequeños */
+
+    .item-content {
+        padding: 20px;
+    }
+
+    .item-container--active {
+        .item-content {
+            display: block !important;
+        }
+    }
+
+    .gallery {
+        display: block;
+        gap: 0;
+        box-sizing: border-box;
+    
+        &__only-desktop-column {
+                display: none;
+        }
+
+        &__main-column {
+            max-width: none;
+        }
+
+        &__item-container {
+            border: 1px map-get($colors, "comp-blue" ) solid;
+            border-radius: 8px;
+        }
+
+        button {
+            border-radius: 8px 8px 0px 0px;
+        }
+    
+    }
+}
+  
+@media screen and (min-width: 600px) and (max-width: 991px) {
+    /* Estilos para tabletas */
+
+    .item-content {
+        padding: 20px;
+    }
+
+
+    .item-container--active {
+        .item-content {
+            display: block !important;
+        }
+    }
+
+    .gallery {
+    
+        &__only-desktop-column {
+                display: none;
+        }
+
+        &__item-container {
+            border: 1px map-get($colors, "comp-blue" ) solid;
+            border-radius: 8px;
+        }
+    
+    }
+}
+
+@media screen and (min-width: 992px) {
+    /* Estilos para computadoras de escritorio */
+
+
+}

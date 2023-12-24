@@ -1,0 +1,113 @@
+@import './_reset.css';
+@import './_variables';
+@import './_fonts.scss';
+
+
+/* Basics */
+
+* {
+
+    &::selection {
+        background-color: map-get($colors, "pink" );
+        color: white;
+    }
+}
+
+body {
+    background-color: map-get($colors, "white" );
+    font-family: 'Montserrat', sans-serif;
+    color: map-get($colors, "black" );
+}
+
+
+h1, h2, h3, h4, h5 {
+    position: relative;
+    line-height: 1.1em;
+}
+
+h1, h2, h3 {
+    color: map-get($colors, "black" );
+}
+
+h4, h5 {
+    color: map-get($colors, "dark-blue" );
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+p {
+    color: map-get($colors, "black" );
+    line-height: 1.1em;
+    font-size: 16px;
+    line-height: 26px;
+
+    &::selection {
+        background-color: map-get($colors, "comp-blue" );
+        color: map-get($colors, "white");
+    }
+}
+
+section{
+    padding-left: 32px;
+    padding-right: 32px;
+    width: 100%;
+    margin-top: 100px;
+}
+
+@media screen and (max-width: 600px) {
+    /* Estilos para dispositivos móviles pequeños */
+
+
+    section{
+    
+        &:nth-child(1) {
+            margin-top: 145px;
+        }
+    }
+
+    
+}
+  
+@media screen and (min-width: 600px) and (max-width: 991px) {
+    /* Estilos para tabletas */
+
+
+    section{
+    
+        &:nth-child(1) {
+            margin-top: 145px;
+        }
+    }
+
+
+}
+
+@media screen and (min-width: 992px) {
+    /* Estilos para computadoras de escritorio */
+
+
+    section{
+    
+        &:nth-child(1) {
+            margin-top: 145px;
+        }
+    }
+}

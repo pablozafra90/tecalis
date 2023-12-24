@@ -1,0 +1,40 @@
+@import '../base/_variables.scss';
+@import '../elements/_background.scss';
+
+.btn {
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 16px 32px 16px 32px ;
+    border-radius: 16px;
+    box-sizing: content-box;
+
+    &--01 {
+        background-color: map-get($colors, "main-blue" );
+        color: map-get($colors, "white" );
+    }
+}
+
+.tag-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tag {
+    text-transform: uppercase;
+    border: 2px map-get($colors, "comp-blue" ) solid;
+    padding: 8px 16px 8px 16px ;
+    font-weight: bold;
+    font-size: 16px;
+    color: map-get($colors, "comp-blue" );
+    border-radius: 22px;
+    background-color: map-get($colors, "white" );
+    cursor: pointer;
+    box-sizing: content-box;
+
+    &:hover {
+        background-color: map-get($colors, "comp-blue" );
+        color: map-get($colors, "white" );
+    }
+}
