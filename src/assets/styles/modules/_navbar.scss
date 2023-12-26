@@ -9,6 +9,7 @@
     width: 100%;
     align-items: center;
     background-color: map-get($colors, "white" );
+    z-index: 10;
 
     &--on-top {
         background-color: transparent;
