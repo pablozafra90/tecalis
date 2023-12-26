@@ -8,8 +8,8 @@
 * {
 
     &::selection {
-        background-color: map-get($colors, "pink" );
-        color: white;
+        background-color: map-get($colors, "comp-blue" );
+        color: map-get($colors, "white");
     }
 
     transition: all ease-in-out 0.2s;
