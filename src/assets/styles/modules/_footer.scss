@@ -91,12 +91,13 @@ footer {
     flex-wrap: wrap;
 
     &__links-container {
-        gap: 24px;
+        gap: unset;
     }
 
     &__col {
         flex-basis: calc(50% - 24px);
         box-sizing: border-box;
+        min-width: auto;
 
         &--double {
             flex-basis: 100%;
