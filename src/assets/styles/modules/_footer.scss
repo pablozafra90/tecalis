@@ -1,0 +1,156 @@
+@import '../base/_variables.scss';
+
+footer {
+    position: relative;
+    width: 100%;
+    background-color: map-get($colors, "light-blue" );
+}
+
+.footer {
+    display: flex;
+    gap: 80px;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 32px 32px 48px 23px;
+
+    &__logo {
+        cursor: pointer;
+    }
+
+    &__links-container {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        flex: 100%;
+    }
+
+    &__col {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        min-width: 175px;
+        gap: 8px;
+
+        &--double {
+            flex-grow: 2;
+        }
+
+        h5, li {
+            cursor: pointer;
+    
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    ul {
+        min-width: 120px;
+        flex-grow: 1;
+        padding: 0;
+        list-style: none;
+        margin: 0;
+
+        li:not(.footer__title) {
+            font-size: 14px;
+            margin-bottom: 8px;
+            line-height: 18px;
+        }
+        
+    }
+
+    h5 {
+        margin: 0;
+        color: map-get($colors, "dark-blue" );
+    }
+
+    &__title {
+        text-transform: uppercase;
+        color: map-get($colors, "comp-blue" );
+        font-size: 16px;
+        margin-bottom: 8px;
+        line-height: 26px;
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+    /* Estilos para dispositivos móviles pequeños */
+
+.footer {
+    gap: 64px;
+    place-content: center;
+    flex-wrap: wrap;
+
+    &__links-container {
+        gap: 24px;
+    }
+
+    &__col {
+        flex-basis: calc(50% - 24px);
+        box-sizing: border-box;
+
+        &--double {
+            flex-basis: 100%;
+            box-sizing: border-box;
+        }
+    }
+
+    &__row {
+        flex-basis: 50%;
+    }
+
+    ul {
+        flex-grow: 1;
+        
+    }
+}
+
+}
+  
+@media screen and (min-width: 600px) and (max-width: 991px) {
+    /* Estilos para tabletas */
+
+.footer {
+    gap: 64px;
+    place-content: center;
+    flex-wrap: wrap;
+
+    &__links-container {
+        gap: 24px;
+        max-width: 750px;
+    }
+
+    &__col {
+
+        &--double {
+            flex: 2;
+        }
+    }
+
+    &__row {
+        flex-basis: 50%;
+    }
+
+    ul {
+        flex: 1;
+        
+    }
+
+}
+
+
+}
+
+@media screen and (min-width: 992px) {
+    /* Estilos para computadoras de escritorio */
+
+}

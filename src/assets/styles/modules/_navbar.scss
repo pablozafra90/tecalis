@@ -2,7 +2,7 @@
 
 .nav-bar {
     position: fixed;
-    padding: 16px 32px 16px 32px;
+    padding: 16px;
     box-sizing: border-box;
     margin: 0;
     top: 0;
@@ -15,30 +15,36 @@
     }
 
     &__container {
+        display: flex;
+        flex-direction: row;
         position: relative;
-        left: 50%;
-        transform: translateX(-50%);
         height: 48px;
         width: 100%;
         max-width: 1440px;
+        padding: 0;
     }
 
-    * {
-        float: left;
+    &__logo {
+        width: 100px;
+        cursor: pointer;
     }
 
     ul {
         list-style-type: none;
-        margin: 0px 0px 0px 80px;
+        margin: 0px;
         padding: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
 
         li {
-            float: left;
             margin-top: -10px;
-        }
+            cursor: pointer;
 
-        :not(:first-child) {
-            margin-left: 32px;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 
@@ -54,7 +60,7 @@
 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 601px) {
     /* Estilos para dispositivos móviles pequeños */
     .nav-bar {
 
@@ -84,10 +90,6 @@
     /* Estilos para computadoras de escritorio */
 
     .nav-bar {
-
-        width: 100%;
-        padding-top: 16px;
-        padding-bottom: 16px;
     
         &__hamburguer-btn {
             display: none;

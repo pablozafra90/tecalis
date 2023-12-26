@@ -1,5 +1,5 @@
 @import './_reset.css';
-@import './_variables';
+@import './_variables.scss';
 @import './_fonts.scss';
 
 
@@ -11,6 +11,8 @@
         background-color: map-get($colors, "pink" );
         color: white;
     }
+
+    transition: all ease-in-out 0.2s;
 }
 
 body {
@@ -35,10 +37,12 @@ h4, h5 {
 
 h1 {
     font-size: 48px;
+    line-height: 60px;
 }
 
 h2 {
     font-size: 36px;
+    line-height: 40px;
 }
 
 h3 {
@@ -51,6 +55,16 @@ h4 {
 
 h5 {
     font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: map-get($colors, "comp-blue" );
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 p {
@@ -75,14 +89,6 @@ section{
 @media screen and (max-width: 600px) {
     /* Estilos para dispositivos móviles pequeños */
 
-
-    section{
-    
-        &:nth-child(1) {
-            margin-top: 145px;
-        }
-    }
-
     
 }
   
@@ -90,24 +96,9 @@ section{
     /* Estilos para tabletas */
 
 
-    section{
-    
-        &:nth-child(1) {
-            margin-top: 145px;
-        }
-    }
-
-
 }
 
 @media screen and (min-width: 992px) {
     /* Estilos para computadoras de escritorio */
-
-
-    section{
     
-        &:nth-child(1) {
-            margin-top: 145px;
-        }
-    }
 }

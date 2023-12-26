@@ -21,17 +21,17 @@ export const NavBar = () => {
         
         <nav className={`nav-bar nav-bar${ stateClassName }`}>
 
-            <div className='nav-bar__container'>
+            <div className='nav-bar__container section-container'>
 
-                <img className="nav-bar__logo"  src={ logo }/>
+                <img className="nav-bar__logo"  src={ logo } onClick={() => { setAlertNav() }}/>
 
                 <ul onClick={() => { setAlertNav() }}>
 
-                    <li><h5>Section</h5></li>
-                    <li><h5>Section</h5></li>
-                    <li><h5>Section</h5></li>
-                    <li><h5>Section</h5></li>
-                    <li><h5>Section</h5></li>
+                    <li><h5 onClick={() => { setAlertNav() }}>Section</h5></li>
+                    <li><h5 onClick={() => { setAlertNav() }}>Section</h5></li>
+                    <li><h5 onClick={() => { setAlertNav() }}>Section</h5></li>
+                    <li><h5 onClick={() => { setAlertNav() }}>Section</h5></li>
+                    <li><h5 onClick={() => { setAlertNav() }}>Section</h5></li>
 
                 </ul>
 
