@@ -72,7 +72,8 @@
         max-width: 400px;
         display: flex;
         flex-direction: column;
-        gap: 32px;
+        gap: 34px;
+        margin-top: -3px;
 
         .item-content {
             display: none;
@@ -83,7 +84,7 @@
     &__items {
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 20px;
     }
 
     &__photo {
@@ -111,13 +112,19 @@
         display: block;
         gap: 0;
         box-sizing: border-box;
+        padding-top: 0;
+        padding-bottom: 32px;
+
+        &__items {
+            gap: 16px;
+        }
 
         &__title {
             text-align: center;
         }
 
         .item-content {
-            padding: 20px;
+            padding: 15px;
         }
     
         .item-container--active {
@@ -126,8 +133,12 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                gap: 32px;
+                gap: 17px;
             }
+        }
+
+        &__photo {
+            width: 90%;
         }
     
         &__only-desktop-column {
@@ -146,6 +157,11 @@
 
         button {
             border-radius: 8px 8px 0px 0px;
+            padding: 14px 16px 15px 16px;
+
+            h4 {
+                line-height: 1.3em;
+            }
         }
 
         .item-container {
@@ -169,13 +185,22 @@
 
 
     .gallery {
+        display: block;
+        gap: 0;
+        box-sizing: border-box;
+        padding-top: 0;
+        padding-bottom: 32px;
 
         &__title {
             text-align: center;
         }
 
+        &__items {
+            gap: 16px;
+        }
+
         .item-content {
-            padding: 20px;
+            padding: 15px;
         }
     
     
@@ -185,8 +210,12 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                gap: 32px;
+                gap: 17px;
             }
+        }
+
+        &__photo {
+            width: 90%;
         }
     
         &__only-desktop-column {
@@ -197,6 +226,15 @@
             border: 1px map-get($colors, "comp-blue" ) solid;
             border-radius: 8px;
             gap: 0;
+        }
+
+        button {
+            border-radius: 8px 8px 0px 0px;
+            padding: 14px 16px 15px 16px;
+
+            h4 {
+                line-height: 1.3em;
+            }
         }
 
         &__main-column {

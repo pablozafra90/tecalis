@@ -22,7 +22,7 @@ export const Header = () => {
                 </li>
               </ul>
               <h1>Lorem ipsum dolor sit amet consectetur adipis</h1>
-              <p>Lorem ipsum dolor sit amet, <a onClick={() => { setAlertNav() }}>consectetur adipis</a> elit. <a onClick={() => { setAlertNav() }}>Mollis adipiscing</a> in turpis luctus ipsum, amet. Risus ac mauris pellentesque sed nunc nulla accumsan nec. Risus gravida donec tempor feugiat.</p>
+              <p>Lorem ipsum dolor sit amet, <a onClick={() => { setAlertNav() }}>consectetur adipiscing</a> elit. <a onClick={() => { setAlertNav() }}>Mollis adipiscing</a> in turpis luctus ipsum, amet. Risus ac mauris pellentesque sed nunc nulla accumsan nec. Risus gravida donec tempor feugiat.</p>
 
             </div>
 
