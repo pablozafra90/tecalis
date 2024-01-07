@@ -43,8 +43,12 @@
             margin-top: -10px;
             cursor: pointer;
 
-            &:hover {
-                text-decoration: underline;
+            h5 {
+
+                &:hover {
+                    color: map-get($colors, "comp-blue" );
+                }
+
             }
         }
     }
